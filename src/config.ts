@@ -1,7 +1,12 @@
 import type { Config } from "@staticcms/core";
 
 const config: Config = {
-  backend: { name: "git-gateway", branch: "main" },
+  backend: {
+    name: 'gitlab',
+    repo: 'kordeviant/static-cms-easycook', // Path to your GitLab repository
+    auth_type: 'pkce', // Required for pkce
+    app_id: 'f544501c94632f9e5f2738fac2a9042aa319889b203ec4c346658d93959b4cae'
+  },
   media_folder: "public/images",
   public_folder: "/images",
   collections: [
