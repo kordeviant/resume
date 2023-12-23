@@ -128,17 +128,18 @@ const config: Config = {
               widget: "list",
               fields: [
                 {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "The part of a URL identifies the type",
+                },
+                {
                   label: "Display Name",
                   name: "name",
                   widget: "string",
                   hint: "Type name for displaying on the site",
                 },
-                {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the tag",
-                },
+
               ],
             },
           ],
@@ -156,17 +157,18 @@ const config: Config = {
               widget: "list",
               fields: [
                 {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "The part of a URL identifies the color",
+                },
+                {
                   label: "Display Name",
                   name: "name",
                   widget: "string",
                   hint: "Color name for displaying on the site",
                 },
-                {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the tag",
-                },
+
               ],
             },
           ],
@@ -184,17 +186,18 @@ const config: Config = {
               widget: "list",
               fields: [
                 {
+                  label: "Slug",
+                  name: "slug",
+                  widget: "string",
+                  hint: "The part of a URL identifies the model",
+                },
+                {
                   label: "Display Name",
                   name: "name",
                   widget: "string",
                   hint: "Model name for displaying on the site",
                 },
-                {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the tag",
-                },
+
               ],
             },
           ],
