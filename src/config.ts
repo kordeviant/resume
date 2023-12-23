@@ -131,12 +131,6 @@ const config: Config = {
               widget: "list",
               fields: [
                 {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the type",
-                },
-                {
                   label: "Display Name",
                   name: "name",
                   widget: "string",
@@ -181,12 +175,6 @@ const config: Config = {
               widget: "list",
               fields: [
                 {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "The part of a URL identifies the model",
-                },
-                {
                   label: "Display Name",
                   name: "name",
                   widget: "string",
@@ -227,7 +215,7 @@ const config: Config = {
           file: "models",
           search_fields: ["models.*.name"],
           display_fields: ["models.*.name"],
-          value_field: "models.*.slug",
+          value_field: "models.*.name",
         },
         {
           label: "Type",
@@ -237,7 +225,7 @@ const config: Config = {
           file: "types",
           search_fields: ["types.*.name"],
           display_fields: ["types.*.name"],
-          value_field: "types.*.slug",
+          value_field: "types.*.name",
         },
         {
           label: "Price",
