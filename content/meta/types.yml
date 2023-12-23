@@ -1,2 +1,3 @@
 types:
-  - سرویس
+  - slug: service
+    name: سرویس

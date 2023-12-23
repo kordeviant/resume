@@ -1,2 +1,3 @@
 models:
-  - لایف
+  - slug: Life
+    name: لایف

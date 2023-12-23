@@ -1,2 +1,3 @@
 colors:
-  - red
+  - slug: red
+    name: قرمز
