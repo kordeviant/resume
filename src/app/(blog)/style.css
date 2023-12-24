@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 html {
+  direction: rtl;
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),

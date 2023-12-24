@@ -1,11 +1,12 @@
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Ubuntu } from "next/font/google";
+import localFont from 'next/font/local';
+const myFont = localFont({ src: '../../assets/Yekan.woff2' })
+
 
 import type { FC, PropsWithChildren } from "react";
 
-const inter = Ubuntu({ weight: "300", subsets: ["latin"] });
 
 export const metadata = {
   title: "Next.js Static CMS Blog",
@@ -14,8 +15,8 @@ export const metadata = {
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fa" dir="rtl">
+      <body className={myFont.className}>{children}</body>
     </html>
   );
 };
