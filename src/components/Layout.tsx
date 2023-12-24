@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
 import NavBar from "@/port-comps/Navbar";
-import ScrollToTop from "@/port-comps/ScrollToTop";
 import type { FC } from "react";
 import Footer from "@/port-comps/Footer";
 
@@ -21,7 +20,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       </Head>
       <div className="App" id={"scroll"}>
         <NavBar />
-        <ScrollToTop />
         <main>{children}</main>
         <Footer />
       </div>
