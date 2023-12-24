@@ -1,4 +1,6 @@
-import "./globals.css";
+import "./style.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Ubuntu } from "next/font/google";
 
 import type { FC, PropsWithChildren } from "react";
