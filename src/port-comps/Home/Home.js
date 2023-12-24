@@ -6,6 +6,7 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Image from "next/image";
 
 function Home() {
   return (
@@ -23,7 +24,7 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                I'M
+                I&apos;M
                 <strong className="main-name"> SOUMYAJIT BEHERA</strong>
               </h1>
 
@@ -33,7 +34,7 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
+              <Image
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
