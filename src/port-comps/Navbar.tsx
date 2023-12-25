@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import Logo from "../assets/log2.svg";
 import Button from "react-bootstrap/Button";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
@@ -22,6 +22,20 @@ function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
+  function scrollHandler() {
+    if (window.scrollY >= 20) {
+      updateNavbar(true);
+    } else {
+      updateNavbar(false);
+    }
+  }
+  useEffect(() => {
+    if (typeof window !== undefined) {
+
+      window.addEventListener("scroll", scrollHandler);
+    }
+
+  }, [])
   return (
     <Navbar
       expanded={expand}
@@ -30,13 +44,16 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <Image src={logo} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand href="/" className="d-flex" style={{ alignItems: 'center' }}>
+          <span style={{ fontSize: 14 }}>
+            <div>ایزی کوک</div>
+            <div>easy cook</div>
+          </span><Logo width={60} height={60} />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
-            updateExpanded(expand ? false : "expanded");
+            updateExpanded(expand ? false : true);
           }}
         >
           <span></span>
@@ -47,7 +64,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} href="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                خانه
               </Nav.Link>
             </Nav.Item>
 
@@ -57,7 +74,7 @@ function NavBar() {
                 href="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                محصولات
               </Nav.Link>
             </Nav.Item>
 
@@ -67,10 +84,7 @@ function NavBar() {
                 href="/project"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+                مدل ها
               </Nav.Link>
             </Nav.Item>
 
@@ -80,7 +94,7 @@ function NavBar() {
                 href="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                درباره شرکت
               </Nav.Link>
             </Nav.Item>
 
@@ -90,19 +104,8 @@ function NavBar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                فروش و تماس
               </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

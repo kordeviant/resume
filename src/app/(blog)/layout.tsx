@@ -1,6 +1,9 @@
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import localFont from 'next/font/local';
 const myFont = localFont({ src: '../../assets/Yekan.woff2' })
 
