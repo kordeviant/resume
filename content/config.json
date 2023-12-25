@@ -1,12 +1,12 @@
 {
   "base_url": "https://easycook.top",
-  "site_title": "Next.js Static CMS Blog",
-  "site_description": "Next.js blog template for Static CMS on Netlify",
+  "site_title": "ظروف نانو گرانیت ایزی کوک",
+  "site_description": "ظروف آشپزخانه ایزی کوک، ترکیب زیبایی و کارآیی، تهیه شده با پوشش های نچسب نسل جدید، برای حفظ سلامت و صرفه جویی در هزینه شما ",
   "site_keywords": [
-    "Next.js",
-    "Static CMS",
-    "Netlify",
-    "React"
+    "ظروف آشپزخانه",
+    "ماهیتابه",
+    "نانو گرانیت",
+    "نچسب"
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",

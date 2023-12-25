@@ -12,8 +12,8 @@ import type { FC, PropsWithChildren } from "react";
 
 
 export const metadata = {
-  title: "Next.js Static CMS Blog",
-  description: "Next.js blog template for Static CMS on Netlify",
+  title: "ظروف نانو گرانیت ایزی کوک",
+  description: "ظروف آشپزخانه ایزی کوک، ترکیب زیبایی و کارآیی، تهیه شده با پوشش های نچسب نسل جدید، برای حفظ سلامت و صرفه جویی در هزینه شما ",
 };
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
