@@ -46,7 +46,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="/" className="d-flex" style={{ alignItems: 'center' }}>
           <span style={{ fontSize: 14 }}>
-            <div>ایزی کوک</div>
+            <div style={{ fontSize: 17, lineHeight: '20px' }}>ایزی کوک</div>
             <div>easy cook</div>
           </span><Logo width={60} height={60} />
         </Navbar.Brand>
