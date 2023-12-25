@@ -99,6 +99,14 @@ button:focus {
   svg {
     display: inline-block;
   }
+  .dropdown-toggle::after {
+    border: none;
+  }
+  .dropdown-menu {
+    direction: rtl;
+    text-align: right;
+    background-color: #f5f5f5d3;
+  }
 }
 
 .navbar-toggler {
@@ -263,20 +271,21 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 40px !important;
 }
 
 .home-section {
   position: relative;
   background-image: var(--image-gradient), url(../../Assets/home-bg.jpg);
   background-position: top center;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 30px !important;
+  padding-top: 10px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
   color: whitesmoke;
   text-align: right;
 }

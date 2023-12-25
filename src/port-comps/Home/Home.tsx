@@ -7,6 +7,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import { Parallax, Pagination, Navigation, Autoplay, EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from "next/image";
 
 // Import Swiper styles
 
@@ -21,31 +22,32 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻🍳
                 </span>
+                پوشش نانوگرانیت نسل جدید
               </h1>
 
               <h1 className="heading-name">
-                I&apos;M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                ظروف آشپزخانه ایزی کوک
+                <strong className="main-name"> EASY COOK</strong>
               </h1>
-
-              <div style={{ padding: 50, textAlign: "right" }}>
+              <div style={{ textAlign: "right", height: 50 }}>
                 <Type />
               </div>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
+
               <Swiper
                 autoplay
                 loop
                 style={{
                   "--swiper-navigation-color": '#fff',
                   "--swiper-pagination-color": '#fff',
+                  textAlign: 'center'
                 } as any}
-                speed={600}
+                speed={1000}
                 pagination={{
                   clickable: true,
                 }}
@@ -58,64 +60,35 @@ function Home() {
                 modules={[Pagination, EffectCoverflow, Navigation, Autoplay,]}
                 className="mySwiper"
               >
-                <SwiperSlide>
-                  <div className="title" data-swiper-parallax="-300">
-                    Slide 1
-                  </div>
-                  <div className="subtitle" data-swiper-parallax="-200">
-                    Subtitle
-                  </div>
-                  <div className="text" data-swiper-parallax="-100">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                      dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                      laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                      Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                      Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                      ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                      tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="title" data-swiper-parallax="-300">
-                    Slide 2
-                  </div>
-                  <div className="subtitle" data-swiper-parallax="-200">
-                    Subtitle
-                  </div>
-                  <div className="text" data-swiper-parallax="-100">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                      dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                      laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                      Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                      Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                      ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                      tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-                    </p>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="title" data-swiper-parallax="-300">
-                    Slide 3
-                  </div>
-                  <div className="subtitle" data-swiper-parallax="-200">
-                    Subtitle
-                  </div>
-                  <div className="text" data-swiper-parallax="-100">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                      dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                      laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                      Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                      Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                      ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                      tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-                    </p>
-                  </div>
-                </SwiperSlide>
+
+                {[1, 2, 3, 4, 5, 6, 7, 8].map(x => {
+                  return (
+                    <SwiperSlide key={x}>
+                      <div style={{ height: 400 }}>
+
+                        <Image
+                          objectFit="contain"
+                          fill
+                          src={`/images/${x}.jpg`}
+                          alt="slide"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={7} >
+              <h1>در طرح ها و رنگ های متنوع</h1>
+            </Col>
+            <Col md={5} style={{ textAlign: 'center' }}>
+
+              <video style={{ width: 300, margin: '0 auto' }} loop muted autoPlay>
+                <source src="vid1.webm" type="video/webm" />
+
+              </video>
             </Col>
           </Row>
         </Container>

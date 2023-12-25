@@ -17,6 +17,7 @@ import {
 import { CgFileDocument } from "react-icons/cg";
 import Link from "next/link";
 import Image from "next/image";
+import { Dropdown, NavItem, NavLink } from "react-bootstrap";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -68,30 +69,37 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            <Dropdown as={NavItem}>
+
+              <Dropdown.Toggle as={NavLink} >محصولات</Dropdown.Toggle>
+              <Dropdown.Menu align="end">
+                <Dropdown.Item>همه</Dropdown.Item>
+                <Dropdown.Item>سرویس ها</Dropdown.Item>
+                <Dropdown.Item>تکی ها</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown as={NavItem}>
+
+              <Dropdown.Toggle as={NavLink} >مدل ها</Dropdown.Toggle>
+              <Dropdown.Menu align="end">
+                <Dropdown.Item>لایف</Dropdown.Item>
+                <Dropdown.Item>دایموند</Dropdown.Item>
+                <Dropdown.Item>گلس</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                href="/about"
+                href="/"
                 onClick={() => updateExpanded(false)}
               >
-                محصولات
+                نگهداری
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                href="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                مدل ها
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                href="/resume"
+                href="/"
                 onClick={() => updateExpanded(false)}
               >
                 درباره شرکت
@@ -100,9 +108,8 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
+                href="/"
+                onClick={() => updateExpanded(false)}
               >
                 فروش و تماس
               </Nav.Link>
