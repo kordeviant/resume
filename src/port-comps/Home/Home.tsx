@@ -46,9 +46,9 @@ function Home() {
                 autoplay
                 loop
                 style={{
-                  '--swiper-navigation-color': '#fff',
-                  '--swiper-pagination-color': '#fff',
-                }}
+                  "--swiper-navigation-color": '#fff',
+                  "--swiper-pagination-color": '#fff',
+                } as any}
                 speed={600}
                 pagination={{
                   clickable: true,
