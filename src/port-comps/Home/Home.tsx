@@ -16,10 +16,6 @@ function Home() {
 
   return (
     <section style={{}}>
-      <div style={{ maxWidth: 600, margin: '0 auto' }}>
-
-      </div>
-
       <Container fluid className="home-section" id="home">
         <Container className="home-content">
           <Row>
@@ -124,7 +120,6 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      <Home2 />
     </section>
   );
 }
