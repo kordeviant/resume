@@ -8,7 +8,6 @@ import TwitterCardMeta from "@/components/meta/TwitterCardMeta";
 import { useState, type FC, useEffect } from "react";
 import models from "@/lib/models";
 import types from "@/lib/types";
-import Resume from "@/components/resume";
 import { Button } from "react-bootstrap";
 import Link from "next/link";
 import { ResumeHome } from "@/components/resume-home";
@@ -44,7 +43,7 @@ const Admin: FC = () => {
             <SocialList />
           </div>
         </div> */}
-        
+
       </Layout>
     </>
   );
