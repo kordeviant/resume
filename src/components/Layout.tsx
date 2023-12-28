@@ -19,9 +19,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <meta name="theme-color" content="#fff" />
       </Head>
       <div className="App" id={"scroll"}>
-        <NavBar />
         <main>{children}</main>
-        <Footer />
       </div>
     </>
   );

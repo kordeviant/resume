@@ -26,7 +26,6 @@ const Navigation: FC = () => {
               p-0
               fixed
               top-0
-              bg-white
               flex
               flex-col
               justify-center

@@ -2,12 +2,19 @@
 import jsPDF from 'jspdf';
 import React, { useRef } from 'react'
 import { Button } from 'react-bootstrap'
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { NavUp } from './NavUp';
+import LinkTransition from '@/components/LinkTransition';
+import { MyCard } from '@/components/MyCard';
+import { Badge } from '@/components/ui/badge';
+import { TbHomeMove } from "react-icons/tb";
 
-function A4resume() {
+
+function A4resume({ children }) {
     const sheetRef = useRef<any>();
     // print html sheetref to pdf using jspdf
     const print = () => {
-        const doc = new jsPDF('p', 'mm', [297, 210], true);
+        const doc = new jsPDF('p', 'mm', [297, 210]);
         doc.html(sheetRef.current, {
             callback: function (doc) {
                 doc.save('A4resume.pdf');
@@ -20,14 +27,14 @@ function A4resume() {
     }
     return (
         <>
-            <Button onClick={print}>print</Button>
 
             <div ref={sheetRef} id="resume-sheet" style={{
                 width: '21cm',
                 height: '29.7cm',
                 padding: '20px',
-                background: 'lightblue'
-            }}>A4resume</div>
+                background: 'rgba(255,255,255,0.4)',
+
+            }}>{children}</div>
         </>
     )
 }
