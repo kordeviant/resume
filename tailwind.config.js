@@ -14,5 +14,8 @@ module.exports = {
       },
     },
   },
+  "files.associations": {
+    "*.css": "postcss"
+  },
   plugins: [require("tailwindcss-animate")],
 }
