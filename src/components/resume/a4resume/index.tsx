@@ -1,13 +1,6 @@
 'use client';
-import jsPDF from 'jspdf';
 import React, { useRef } from 'react';
 import { Button } from 'react-bootstrap';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { NavUp } from './NavUp';
-import LinkTransition from '@/components/LinkTransition';
-import { MyCard } from '@/components/MyCard';
-import { Badge } from '@/components/ui/badge';
-import { TbHomeMove } from 'react-icons/tb';
 import IntroCard from '../IntroCard';
 
 function A4resume({ children }) {
