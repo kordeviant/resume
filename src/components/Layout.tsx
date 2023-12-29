@@ -13,14 +13,12 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="theme-color" content="#fff" />
       </Head>
-      <div className="App" id={"scroll"}>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
     </>
   );
 };

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 html {
+  margin: 0;
 }
 body {
   margin: 0;
@@ -84,29 +85,41 @@ body {
   }
 }
 .nav-up {
-  max-width: min(100vw, 400px);
   text-align: center;
   padding-block: 10px;
   position: sticky;
   left: 0;
   top: 0;
+  max-width: 500px;
   @media (width <= 600px) {
+    flex-wrap: wrap;
+    max-width: 100%;
     padding-inline: 10px;
     width: 100%;
     width: 100%;
-  }
-}
-.nav-up > * {
-  > * > * {
-    height: 100%;
-    .flex-col {
-      padding: 10px;
-      > .inline-flex {
-        display: block;
+    .resume-btns {
+      > * {
+        aspect-ratio: unset !important;
       }
     }
-    * {
-      padding: 0;
+  }
+  .resume-btns {
+    > * {
+      aspect-ratio: 5 / 3;
+    }
+  }
+  > * {
+    > * > * {
+      height: 100%;
+      .flex-col {
+        padding: 10px;
+        > .inline-flex {
+          display: block;
+        }
+      }
+      * {
+        padding: 0;
+      }
     }
   }
 }

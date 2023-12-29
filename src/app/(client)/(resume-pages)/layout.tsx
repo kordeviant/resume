@@ -8,13 +8,10 @@ import { TbHomeMove } from 'react-icons/tb'
 function layout({ children }) {
   return (
     <>
-      <div style={{
-        width: '21cm', margin: '0 auto', marginBottom: 30, position: 'relative'
-      }}>
 
-        <NavUp />
-        {children}
-      </div>
+
+      <NavUp />
+      {children}
     </>
   )
 }

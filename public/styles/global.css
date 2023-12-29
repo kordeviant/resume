@@ -7,11 +7,6 @@ body {
   background-color: #fff;
   color: #222;
   font-weight: 200;
-  height: 100%;
-}
-
-#__next {
-  height: 100%;
 }
 
 a {

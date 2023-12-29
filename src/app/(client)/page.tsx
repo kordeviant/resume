@@ -28,13 +28,12 @@ const Admin: FC = () => {
   }, [])
   return (
     <>
-      <Layout>
-        <BasicMeta url={"/"} />
-        <OpenGraphMeta url={"/"} />
-        <TwitterCardMeta url={"/"} />
-        <ResumeHome />
+      <BasicMeta url={"/"} />
+      <OpenGraphMeta url={"/"} />
+      <TwitterCardMeta url={"/"} />
+      <ResumeHome />
 
-        {/* <div className="flex flex-auto items-center justify-center py-0 px-6">
+      {/* <div className="flex flex-auto items-center justify-center py-0 px-6">
           <div>
             <h1 className="text-3xl">models</h1>
             {models.models.map(x => <div key={x.slug}>{x.name}</div>)}
@@ -44,7 +43,6 @@ const Admin: FC = () => {
           </div>
         </div> */}
 
-      </Layout>
     </>
   );
 };

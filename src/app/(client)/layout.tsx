@@ -1,27 +1,30 @@
 import "./style.css";
 import "./App.css";
-import localFont from 'next/font/local';
-const myFont = localFont({ src: '../../assets/Yekan.woff2' })
+
 
 
 import { type FC, type PropsWithChildren } from "react";
 import Script from "next/script";
 import { TransitionRouteProvider } from "./TransitionRouteProvider";
+import Layout from "@/components/Layout";
 
 
 export const metadata = {
-  title: "ظروف نانو گرانیت ایزی کوک",
-  description: "ظروف آشپزخانه ایزی کوک، ترکیب زیبایی و کارآیی، تهیه شده با پوشش های نچسب نسل جدید، برای حفظ سلامت و صرفه جویی در هزینه شما ",
+  title: "Puria Kordrostami's resume",
+  description: "12 years of experience in the field of IT."
 };
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
 
 
   return (
     <html lang="en">
-      <body className={myFont.className}>
-        <TransitionRouteProvider>
-          {children}
-        </TransitionRouteProvider>
+      <body>
+        <Layout>
+
+          <TransitionRouteProvider>
+            {children}
+          </TransitionRouteProvider>
+        </Layout>
         <canvas className="landscape"></canvas>
         <Script
           id="custom-vertex" type="x-shader/x-vertex"
