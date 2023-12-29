@@ -31,8 +31,27 @@ main {
   justify-content: center;
   align-items: center;
 }
-#resume-sheet * {
-  color: #000;
+#resume-sheet {
+  * {
+    color: #000;
+  }
+  .qrcode {
+    path:last-child {
+      fill: currentColor;
+    }
+  }
+}
+@media print {
+  html body *:not(#resume-sheet, #resume-sheet *) {
+    visibility: hidden;
+  }
+  #resume-sheet {
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    display: block;
+  }
 }
 @layer base {
   .bgapply,
