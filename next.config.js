@@ -1,5 +1,7 @@
+const withBuilderDevTools = require('@builder.io/dev-tools/next')();
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withBuilderDevTools({
   experimental: {
     webpackBuildWorker: true,
   },
@@ -8,16 +10,16 @@ const nextConfig = {
       ...[
         {
           test: /\.ya?ml$/,
-          use: "js-yaml-loader",
+          use: 'js-yaml-loader',
         },
         {
           test: /\.svg$/,
-          use: "@svgr/webpack",
+          use: '@svgr/webpack',
         },
       ]
     );
     return config;
   },
-};
+});
 
 module.exports = nextConfig;
