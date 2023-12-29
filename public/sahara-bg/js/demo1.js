@@ -135,7 +135,6 @@ function createLandscape(params) {
   }
 
   function onInputMove(e) {
-    e.preventDefault();
 
     var x, y
     if (e.type == "mousemove") {

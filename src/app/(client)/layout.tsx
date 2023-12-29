@@ -1,33 +1,34 @@
-import "./style.css";
-import "./App.css";
+import './style.css';
+import './App.css';
 
+import { type FC, type PropsWithChildren } from 'react';
+import Script from 'next/script';
+import { TransitionRouteProvider } from './TransitionRouteProvider';
+import Layout from '@/components/Layout';
+import { Metadata, Viewport } from 'next';
 
-
-import { type FC, type PropsWithChildren } from "react";
-import Script from "next/script";
-import { TransitionRouteProvider } from "./TransitionRouteProvider";
-import Layout from "@/components/Layout";
-
-
-export const metadata = {
-  title: "Puria Kordrostami's resume",
-  description: "12 years of experience in the field of IT."
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
+export const metadata: Metadata = {
+  other: {
+    charSet: 'utf-8',
+  },
+  title: "Puria Kordrostami's resume",
+};
+
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
-
-
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         <Layout>
-
-          <TransitionRouteProvider>
-            {children}
-          </TransitionRouteProvider>
+          <TransitionRouteProvider>{children}</TransitionRouteProvider>
         </Layout>
-        <canvas className="landscape"></canvas>
+        <canvas className='landscape'></canvas>
         <Script
-          id="custom-vertex" type="x-shader/x-vertex"
+          id='custom-vertex'
+          type='x-shader/x-vertex'
           dangerouslySetInnerHTML={{
             __html: `//
             // GLSL textureless classic 3D noise "cnoise",
@@ -259,7 +260,8 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
           }}
         />
         <Script
-          id="custom-fragment" type="x-shader/x-fragment"
+          id='custom-fragment'
+          type='x-shader/x-fragment'
           dangerouslySetInnerHTML={{
             __html: `uniform float time;
             uniform vec3 color;
@@ -286,12 +288,12 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
             }`,
           }}
         />
-        <Script src="sahara-bg/js/vendor/three.min.js" />
-        <Script src="sahara-bg/js/vendor/Sky.js" />
-        <Script src="sahara-bg/js/vendor/hammer.min.js" />
-        <Script src="sahara-bg/js/vendor/charming.min.js" />
-        <Script src="sahara-bg/js/vendor/TweenMax.min.js" />
-        <Script src="sahara-bg/js/demo1.js" />
+        <Script src='sahara-bg/js/vendor/three.min.js' />
+        <Script src='sahara-bg/js/vendor/Sky.js' />
+        <Script src='sahara-bg/js/vendor/hammer.min.js' />
+        <Script src='sahara-bg/js/vendor/charming.min.js' />
+        <Script src='sahara-bg/js/vendor/TweenMax.min.js' />
+        <Script src='sahara-bg/js/demo1.js' />
       </body>
     </html>
   );
