@@ -24,7 +24,7 @@ function createLandscape(params) {
     render();
 
     if (isMobile)
-      window.addEventListener("touchmove", onInputMove, { passive: false })
+      window.addEventListener("touchmove", onInputMove, { passive: true })
     else
       window.addEventListener("mousemove", onInputMove)
 
